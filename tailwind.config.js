@@ -2,8 +2,12 @@ tailwind.config = {
 	theme: {
 		extend: {
 			colors: {
-				clifford: '#da373d',
-			}
+				main_text_color: '#2D2D2D',
+				fotter_color: "#181818"
+			},
+			fontFamily: {
+				'anton': ['Anton', 'sans-serif'] 
+			},
 		}
 	},
 	screens: {

@@ -7,13 +7,64 @@
 	<title>Beauty store</title>
 	<script src="https://cdn.tailwindcss.com"></script>
 	<script src="/tailwind.config.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 </head>
 <body>
-	<nav class="bg-clifford md:text-5xl">navigation bar</nav>
+	<nav class="mt-[35px] mx-[5vw] border-gray-200 px-2 sm:px-4 py-2.5 rounded">
+		<div class="container flex flex-wrap justify-between items-center mx-auto">
+			<div>
+				<a href="#"><h1 class="font-anton text-3xl">Beauty</h1></a>
+			</div>
+
+			<input type="checkbox" id="checkbox_toggle" class="peer hidden inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"></input>
+			<label for="checkbox_toggle" class="md:hidden flex">
+					<svg class="w-6 h-6 hover:text-primary_color" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+			</label>
+			
+			<div class="peer-checked:flex flex-row-reverse hidden w-full md:block md:w-auto" id="checkbox_toggle">
+				<ul class="md:text-gray-900 flex flex-col items-center p-4 mt-4 rounded-lg md:bg-transparent md:w-full bg-secondary_color border border-gray-100 md:flex-row md:w-full md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
+					<li class="flex flex-col items-center">
+						<svg id="account_icon_svg" class="hover:text-primary_color md:text-gray-900 md:hidden fill-current w-[40px] h-[40px]" viewBox="0 0 44 56">
+							<path d="M22 3.66667C11.88 3.66667 3.66669 11.88 3.66669 22C3.66669 32.12 11.88 40.3333 22 40.3333C32.12 40.3333 40.3334 32.12 40.3334 22C40.3334 11.88 32.12 3.66667 22 3.66667ZM22 11C25.5384 11 28.4167 13.8783 28.4167 17.4167C28.4167 20.955 25.5384 23.8333 22 23.8333C18.4617 23.8333 15.5834 20.955 15.5834 17.4167C15.5834 13.8783 18.4617 11 22 11ZM22 36.6667C18.2784 36.6667 13.8784 35.1633 10.7434 31.3867C13.9546 28.8672 17.9183 27.4978 22 27.4978C26.0817 27.4978 30.0454 28.8672 33.2567 31.3867C30.1217 35.1633 25.7217 36.6667 22 36.6667Z" />
+						</svg>
+						<p class="text-2xl hover:text-primary_color md:hidden">Bassima</p>
+					</li>
+					<li>
+						<a href="#"class="block py-2 pr-4 pl-3 rounded md:bg-transparent text-2xl md:p-0 hover:text-primary_color">Home</a>
+					</li>
+					<li>
+						<a href="#" class="block py-2 pr-4 pl-3 rounded md:bg-transparent text-2xl md:p-0 hover:text-primary_color">About</a>
+					</li>
+					<li>
+						<a href="#" class="block py-2 pr-4 pl-3 rounded md:bg-transparent text-2xl md:p-0 hover:text-primary_color">Shop</a>
+					</li>
+					<li>
+						<a href="#" class="block py-2 pr-4 pl-3 rounded md:bg-transparent text-2xl md:p-0 hover:text-primary_color">Search</a>
+					</li>
+					<li>
+						<a href="#" class="block py-2 pr-4 pl-3 rounded md:bg-transparent text-2xl md:p-0 hover:text-primary_color">Blog</a>
+					</li>
+					<li>
+						<a href="#" class="block md:hidden py-2 pr-4 pl-3 rounded md:bg-transparent text-2xl md:p-0 hover:text-primary_color">Settings</a>
+					</li>
+					<li>
+						<a href="#" class="md:flex block py-2 pr-4 pl-3 hidden rounded md:bg-transparent md:p-0">
+							<svg id="account_icon_svg" class="hover:text-primary_color md:text-gray-900 fill-current w-[40px] h-[40px]" viewBox="0 0 44 56">
+								<path d="M22 3.66667C11.88 3.66667 3.66669 11.88 3.66669 22C3.66669 32.12 11.88 40.3333 22 40.3333C32.12 40.3333 40.3334 32.12 40.3334 22C40.3334 11.88 32.12 3.66667 22 3.66667ZM22 11C25.5384 11 28.4167 13.8783 28.4167 17.4167C28.4167 20.955 25.5384 23.8333 22 23.8333C18.4617 23.8333 15.5834 20.955 15.5834 17.4167C15.5834 13.8783 18.4617 11 22 11ZM22 36.6667C18.2784 36.6667 13.8784 35.1633 10.7434 31.3867C13.9546 28.8672 17.9183 27.4978 22 27.4978C26.0817 27.4978 30.0454 28.8672 33.2567 31.3867C30.1217 35.1633 25.7217 36.6667 22 36.6667Z" />
+							</svg>
+							<p class="text-2xl hover:text-primary_color md:hidden">Logout</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 	<main class="bg-gray-500">
 		<h1>page main content container</h1>
 		<section id="hero_section" class="bg-green-500">
-			<h1>hero section</h1>
+			<h1 class="font-anton">hero section</h1>
 		</section>
 		<section id="top_picks" class="bg-pink-50">
 			<h1>top picks section</h1>
