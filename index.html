@@ -61,17 +61,50 @@
 			</div>
 		</div>
 	</nav>
-	<main class="bg-gray-500">
-		<h1>page main content container</h1>
-		<section id="hero_section" class="bg-green-500">
+
+	<main class="bg-gray-500 grid grid-cols-1 grid-rows-2 h-screen">
+		<section id="hero_section" class="bg-green-500 col-span-1 row-span-2 mx-3 my-3">
 			<h1 class="font-anton">hero section</h1>
 		</section>
-		<section id="top_picks" class="bg-pink-50">
-			<h1>top picks section</h1>
+		<section id="top_picks" class="col-span-1 row-span-1 mx-3 my-3 py-6 text-center justify-center">
+			<h1 class="text-2xl font-bold pb-2">Top Categories</h1>
+			<span>These are the popular and best selling <br> categories in this line</span>
+			<section class="flex flex-col md:flex-row items-center justify-center py-6">
+				<div class="bg-[url('/imgs/eyeshadow.png')] bg-cover mx-3 my-3 rounded-lg text-2xl font-medium py-[5vw] px-[5vw] opacity-70 hover:opacity-100"><p>Eyeshadows</p></div>
+				<div class="bg-[url('/imgs/brushes.png')] bg-cover mx-3 my-3 rounded-lg text-2xl font-medium py-[5vw] px-[6.3vw] opacity-70 hover:opacity-100"><p>Brushes</p></div>
+				<div class="bg-[url('/imgs/lipsticks.png')] bg-cover mx-3 my-3 rounded-lg text-2xl font-medium py-[5vw] px-[6vw] opacity-70 hover:opacity-100"><p>Lipsticks</p></div>
+			</section>
 		</section>
 	</main>
-	<footer class="bg-blue-900">
-		<h1>fotter</h1>
+
+	<footer class="bg-fotter_color grid grid-cols-1 md:grid-cols-3 grid-rows-4 md:grid-rows-2 px-5 py-12 md:pl-16">
+		<section class="col-span-1 row-span-2 flex flex-col pb-4 px-2 py-6 md:flex-row gap-3 border-b-2 md:border-r-2 md:border-b-0">
+			<form action="#" class="flex flex-col items-start gap-3">
+				<h4 class="text-white font-bold text-2xl">Subscribe to our blog</h4>
+				<input type="email" placeholder="Enter email" class="rounded py-1 pl-3 pr-[12vw] md:pr-[7vw]">
+				<input type="submit" value="Subscribe" class="px-6 py-1 rounded bg-green-300">
+			</form>
+			<!-- <hr class="absolute left-[25%] bottom-[45%] bg-white border-0 md:transform md:rotate-90 h-[5px] w-[100%] md:w-[10%]"> -->
+		</section>
+
+		<section class="grid grid-cols-2 grid-rows-1 col-span-2 row-span-2 justify-center justify-items-center px-2 py-2">
+			<section class="flex flex-col col-span-1 row-span-1 text-white">
+				<h4 class="text-2xl pb-2">Contact</h4>
+				<span>Phone: (953) 259-5400</span>
+				<span>Email: beauty@commerce.org</span>
+				<span>Adress: 331 Runolfsson River, 15491 Durwardshire, Arizona</span>
+			</section>
+			<section class="flex flex-col col-span-1 row-span-2 text-white">
+				<h4 class="text-2xl pb-2">Links</h4>
+				<a href="#">FAQs</a>
+				<a href="#">Locations</a>
+				<a href="#">About us</a>
+			</section>
+		</section>
+
+		<section class="col-span-1 pt-2 md:col-span-3 row-span-1 text-center">
+			<span class="text-white text-[10px]">All rights reserved. Beauty line</span>
+		</section>
 	</footer>
 </body>
 </html>
