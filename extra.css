@@ -1,0 +1,24 @@
+.link-underline {
+	border-bottom-width: 0;
+	background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+	background-size: 0 3px;
+	background-position: 0 100%;
+	background-repeat: no-repeat;
+	transition: background-size .4s ease-in-out;
+}
+
+.link-underline-black {
+	background-image: linear-gradient(transparent, transparent), linear-gradient(#CE93FE, #CE93FE)
+}
+
+.link-underline:hover {
+	background-size: 100% 3px;
+	background-position: 0 100%
+}
+
+@media screen and (max-width: 868px){
+	.link-underline:hover {
+		background-size: 0 3px;
+		background-position: 0 100%;
+	}
+}
