@@ -11,12 +11,13 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+	<script src="/main.js"></script>
 </head>
 <body class="grid grid-cols-1 grid-rows-10 h-screen">
 	<nav class="mt-[35px] mx-[5vw] border-gray-200 px-2 sm:px-4 py-2.5 rounded col-span-1 row-span-1">
 		<div class="container flex flex-wrap justify-between items-center mx-auto">
 			<div>
-				<a href="#"><h1 class="font-anton text-[3vw]">Beauty</h1></a>
+				<a href="#"><h1 class="font-anton text-[6vw] md:text-[3vw]">Beauty</h1></a>
 			</div>
 
 			<input type="checkbox" id="checkbox_toggle" class="peer hidden inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"></input>
@@ -69,26 +70,59 @@
 		<!--  Carousel -->
 		<section id="hero_section" class="col-span-1 row-span-4 mx-[12vw] my-3">
 			<!-- ITEM CONTAINER -->
-			<div class="">
+			<div class="relative overflow-hidden">
 				<!-- ITEM 1 -->
-				<div class="grid grid-cols-3 grid-rows-1 bg-[#250141] rounded">
-					<section class="col-span-2 row-span-1 flex flex-col gap-3 items-start pl-14 pt-9">
-						<h1 class="font-anton text-[7vw] text-[#F3E9F8]">Purple Rush</h1>
+				<div id="carousel-items" class="grid grid-cols-1 grid-rows-2 md:grid-cols-3 md:grid-rows-1 bg-[#250141] rounded carousel-items duration-700 ease-in-out fade">
+					<section class="md:col-span-2 md:row-span-1 col-span-1 row-span-1 flex flex-col gap-3 items-start pl-[2.5rem] md:pl-[5rem] pt-9 pb-[4rem]">
+						<h1 class="font-anton text-[12vw] md:text-[7vw] text-[#F3E9F8]">Purple Rush</h1>
 						<p class="text-white pr-[5vw] pb-[2vw]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consequat ut massa condimentum placerat. Morbi lacinia porta odio et convallis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque tincidunt urna vitae diam rhoncus rutrum. Aliquam ornare imperdiet imperdiet. Fusce tristique magna quis libero euismod sagittis a non leo. Sed porta sed turpis eget luctus. Maecenas suscipit, ante eu faucibus consectetur...<a class="text-nav_color_hover">More</a></p>
 						<button class="bg-nav_color_hover px-[6vw] text-lg py-3 text-white rounded hover:bg-button_color_hover transition ease-in-out">Shop now</button>
 					</section>
-					<section class="col-span-1 row-span-1">
-						<img src="imgs/hero_pic_1.png" class="object-contain rounded" alt="beauty_image">
+					<section class="col-span-1 row-span-1 object-fill bg-cover" style="background-image: url('imgs/hero_pic_1.png')">
+						<!-- <img src="imgs/hero_pic_1.png" class="object-fill rounded" alt="beauty_image"> -->
 					</section>
 				</div>
 				<!-- ITEM 2 -->
-				<div class="">
-
+				<div id="carousel-items" class="grid grid-cols-1 grid-rows-2 md:grid-cols-3 md:grid-rows-1 bg-[#E5C3E8] rounded carousel-items duration-700 ease-in-out fade">
+					<section class="md:col-span-2 md:row-span-1 col-span-1 row-span-1 flex flex-col gap-3 items-start pl-[2.5rem] md:pl-[5rem] pt-9 pb-[4rem]">
+						<h1 class="font-anton text-[12vw] md:text-[7vw] text-[#B52A96]">Purple Rush</h1>
+						<p class="text-[#000000] pr-[5vw] pb-[2vw]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consequat ut massa condimentum placerat. Morbi lacinia porta odio et convallis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque tincidunt urna vitae diam rhoncus rutrum. Aliquam ornare imperdiet imperdiet. Fusce tristique magna quis libero euismod sagittis a non leo. Sed porta sed turpis eget luctus. Maecenas suscipit, ante eu faucibus consectetur...<a class="text-[#B52A96]">More</a></p>
+						<button class="bg-[#B52A96] px-[6vw] text-lg py-3 text-white rounded hover:bg-button_color_hover transition ease-in-out">Shop now</button>
+					</section>
+					<section class="col-span-1 row-span-1 bg-cover" style="background-image: url('imgs/hero_pic_2.png')">
+						<!-- <img src="imgs/hero_pic_2.png" class="object-contain rounded" alt="beauty_image"> -->
+					</section>
 				</div>
 				<!-- ITEM 3 -->
-				<div class="">
-
+				<div id="carousel-items" class="grid grid-cols-1 grid-rows-2 md:grid-cols-3 md:grid-rows-1 bg-[#230132] rounded carousel-items duration-700 ease-in-out fade">
+					<section class="md:col-span-2 md:row-span-1 col-span-1 row-span-1 flex flex-col gap-3 items-start pl-[2.5rem] md:pl-[5rem] pt-9 pb-[4rem]">
+						<h1 class="font-anton text-[12vw] md:text-[7vw] text-[#F5C3FE]">Purple Rush</h1>
+						<p class="text-white pr-[5vw] pb-[2vw]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consequat ut massa condimentum placerat. Morbi lacinia porta odio et convallis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque tincidunt urna vitae diam rhoncus rutrum. Aliquam ornare imperdiet imperdiet. Fusce tristique magna quis libero euismod sagittis a non leo. Sed porta sed turpis eget luctus. Maecenas suscipit, ante eu faucibus consectetur...<a class="text-[#F5C3FE]">More</a></p>
+						<button class="bg-[#F5C3FE] px-[6vw] text-lg py-3 text-white rounded hover:bg-button_color_hover transition ease-in-out">Shop now</button>
+					</section>
+					<section class="col-span-1 row-span-1 bg-cover" style="background-image: url('imgs/hero_pic_3.png')">
+						<!-- <img src="imgs/hero_pic_3.png" class="object-contain rounded" alt="beauty_image"> -->
+					</section>
 				</div>
+				<!-- carousel indicators -->
+				<div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+					<button id="btn1" class="w-3 h-3 rounded-full dot"></button>
+					<button id="btn2" class="w-3 h-3 rounded-full dot"></button>
+					<button id="btn3" class="w-3 h-3 rounded-full dot"></button>
+				</div>
+				<!-- Slider controls -->
+				<button id="prev" type="button" class="prev absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none">
+					<span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+						<svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+						<span class="sr-only">Previous</span>
+					</span>
+				</button>
+				<button id="next" type="button" class="next absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none">
+					<span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+						<svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+						<span class="sr-only">Next</span>
+					</span>
+				</button>
 			</div>
 		</section>
 
@@ -96,9 +130,9 @@
 			<h1 class="text-2xl font-bold pb-2">Top Categories</h1>
 			<span>These are the popular and best selling <br> categories in this line</span>
 			<section class="flex flex-col md:flex-row items-center justify-center py-6">
-				<div class="bg-[url('/imgs/eyeshadow.png')] bg-cover mx-3 my-3 rounded-lg text-2xl font-medium py-[5vw] px-[4vw] md:py-[5vw] md:px-[5vw] opacity-70 hover:opacity-100 hover:text-white transition ease-in-out"><p>Eyeshadows</p></div>
-				<div class="bg-[url('/imgs/brushes.png')] bg-cover mx-3 my-3 rounded-lg text-2xl font-medium py-[5.5vw] px-[7vw] md:py-[4.9vw] md:px-[6.3vw] opacity-70 hover:opacity-100 hover:text-white transition ease-in-out"><p>Brushes</p></div>
-				<div class="bg-[url('/imgs/lipsticks.png')] bg-cover mx-3 my-3 rounded-lg text-2xl font-medium py-[5.5vw] px-[7vw] md:py-[4.9vw] md:px-[6vw] opacity-70 hover:opacity-100 hover:text-white transition ease-in-out"><p>Lipsticks</p></div>
+				<div class="bg-cover mx-3 my-3 rounded-lg text-2xl font-medium py-[10vw] px-[9vw] md:py-[5.1vw] md:px-[5vw] opacity-70 hover:opacity-100 hover:text-white transition ease-in-out" style="background-image: url('/imgs/eyeshadow.png')"><p>Eyeshadows</p></div>
+				<div class="bg-cover mx-3 my-3 rounded-lg text-2xl font-medium py-[9.5vw] px-[12vw] md:py-[5vw] md:px-[6.3vw] opacity-70 hover:opacity-100 hover:text-white transition ease-in-out" style="background-image: url('/imgs/brushes.png')"><p>Brushes</p></div>
+				<div class="bg-cover mx-3 my-3 rounded-lg text-2xl font-medium py-[9.5vw] px-[12vw] md:py-[5vw] md:px-[6vw] opacity-70 hover:opacity-100 hover:text-white transition ease-in-out" style="background-image: url('/imgs/lipsticks.png')"><p>Lipsticks</p></div>
 			</section>
 		</section>
 	</main>
@@ -110,10 +144,9 @@
 				<input type="email" placeholder="Enter email" class="rounded py-1 pl-3 pr-[12vw] md:pr-[7vw]">
 				<input type="submit" value="Subscribe" class="px-6 py-1 text-white rounded bg-button_color hover:bg-button_color_hover transition ease-in-out">
 			</form>
-			<!-- <hr class="absolute left-[25%] bottom-[45%] bg-white border-0 md:transform md:rotate-90 h-[5px] w-[100%] md:w-[10%]"> -->
 		</section>
 
-		<section class="grid grid-cols-2 grid-rows-1 col-span-2 row-span-2 justify-center justify-items-center px-2 py-2">
+		<section class="grid grid-cols-2 grid-rows-1 col-span-2 row-span-2 justify-center justify-items-center px-2 pl-8 py-2">
 			<section class="flex flex-col col-span-1 row-span-1 text-white">
 				<h4 class="text-2xl pb-2">Contact</h4>
 				<span>Phone: (953) 259-5400</span>
