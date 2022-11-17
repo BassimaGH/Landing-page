@@ -1,4 +1,66 @@
+// GLOBAL VARIABLES
 let slideIndex = 1;
+
+/*
+	NAVIGATION FUNCTIONS
+*/
+
+function hideNav(){
+	let closeElement = document.getElementById("close_menu");
+	let navElements = document.getElementById("nav_links");
+
+	closeElement.addEventListener("click", () => {
+		navElements.style.display = "none";
+		closeElement.style.display = "none";
+		console.log("hide happened");
+	})
+}
+
+function showNav(){
+	let openElement = document.getElementById("open_menu");
+	let navElements = document.getElementById("nav_links");
+	let closeElement = document.getElementById("close_menu");
+
+
+	openElement.addEventListener("click", () => {
+		navElements.style.display = "flex";
+		closeElement.style.display = "block";
+		console.log("show happened");
+
+	})
+}
+
+function navFunctions(){
+	let w = parseInt(window.innerWidth);
+	let navElements = document.getElementById("nav_links");
+	let closeElement = document.getElementById("close_menu");
+
+	// for detecting the window size when resizing
+	window.addEventListener("resize", () => {
+		if(window.matchMedia("(min-width: 903px)").matches) {
+			navElements.style.display = "block";
+			closeElement.style.display = "none";
+			console.log("big screen");
+		} else {
+			navElements.style.display = "none";
+			
+			showNav();
+			hideNav();
+			console.log("small screen");
+		}
+	})
+
+	// for detecting the window size without resizing
+	if (w < 903) {
+		showNav();
+		hideNav();
+	}
+
+}
+
+/*
+	CAROUSEL FUNCTIONS
+*/
 
 function plusSlides(n) {
 	showSlides(slideIndex += n);
@@ -27,9 +89,15 @@ function showSlides(n) {
 	dots[slideIndex-1].className += " active";
 }
 
+/*
+	LOAD FUNCTIONS
+*/
+
 function loadHandler(){
 	showSlides(slideIndex);
 
+	navFunctions();
+	
 	const prev = document.getElementById("prev");
 	const next = document.getElementById("next");
 

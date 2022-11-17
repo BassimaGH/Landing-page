@@ -11,6 +11,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+	<script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
 	<script src="/main.js"></script>
 </head>
 <body class="grid grid-cols-1 grid-rows-10 h-screen">
@@ -20,13 +21,15 @@
 				<a href="#"><h1 class="font-anton text-[6vw] md:text-[3vw]">Beauty</h1></a>
 			</div>
 
-			<input type="checkbox" id="checkbox_toggle" class="peer hidden inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"></input>
-			<label for="checkbox_toggle" class="md:hidden flex">
-					<svg class="w-9 h-9 hover:text-nav_color_hover" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-			</label>
+			<div class="md:hidden flex">
+				<svg class="w-9 h-9 hover:text-nav_color_hover" id="open_menu" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+			</div>
 			
-			<div class="peer-checked:flex flex-row-reverse hidden w-full md:block md:w-auto" id="checkbox_toggle">
-				<ul class="md:text-gray-900 flex flex-col bg-[#F3E9F8] h-screen md:h-auto mr-[-1.8rem] px-10 py-4 items-start p-4 z-40 top-0 md:z-0 fixed md:static rounded-lg md:bg-transparent md:w-full border border-gray-100 md:flex-row md:w-full md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
+			<div class="peer-checked:flex flex-row-reverse hidden w-full md:block md:w-auto" id="nav_links">
+				<ul class="md:text-gray-900 justify-evenly flex flex-col bg-[#F3E9F8] h-screen md:h-auto mr-[-1.8rem] px-10 py-4 items-start p-4 z-40 top-0 md:z-0 fixed md:static rounded-lg md:bg-transparent md:w-full border border-gray-100 md:flex-row md:w-full md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
+					<li class="pb-8">
+						<iconify-icon icon="charm:cross" id="close_menu" class="hidden text-[2rem] hover:text-nav_color_hover"></iconify-icon>
+					</li>
 					<li class="flex flex-col items-center pl-4 pb-8">
 						<svg id="account_icon_svg" class="hover:text-nav_color_hover transition ease-in-out md:text-gray-900 md:hidden fill-current w-[40px] h-[40px]" viewBox="0 0 44 56">
 							<path d="M22 3.66667C11.88 3.66667 3.66669 11.88 3.66669 22C3.66669 32.12 11.88 40.3333 22 40.3333C32.12 40.3333 40.3334 32.12 40.3334 22C40.3334 11.88 32.12 3.66667 22 3.66667ZM22 11C25.5384 11 28.4167 13.8783 28.4167 17.4167C28.4167 20.955 25.5384 23.8333 22 23.8333C18.4617 23.8333 15.5834 20.955 15.5834 17.4167C15.5834 13.8783 18.4617 11 22 11ZM22 36.6667C18.2784 36.6667 13.8784 35.1633 10.7434 31.3867C13.9546 28.8672 17.9183 27.4978 22 27.4978C26.0817 27.4978 30.0454 28.8672 33.2567 31.3867C30.1217 35.1633 25.7217 36.6667 22 36.6667Z" />
@@ -138,7 +141,7 @@
 	</main>
 
 	<footer class="bg-fotter_color grid grid-cols-1 md:grid-cols-3 grid-rows-4 md:grid-rows-2 px-5 py-12 md:pl-16 col-span-1 row-span-2">
-		<section class="col-span-1 row-span-2 flex flex-col pb-4 px-2 py-6 md:flex-row gap-3 border-b-2 md:border-r-2 md:border-b-0">
+		<section class="col-span-1 row-span-2 flex flex-col md:pl-2 pl-8 pb-8 px-2 py-6 md:flex-row gap-3 border-b-2 md:border-r-2 md:border-b-0">
 			<form action="#" class="flex flex-col items-start gap-3">
 				<h4 class="text-white font-bold text-2xl">Subscribe to our blog</h4>
 				<input type="email" placeholder="Enter email" class="rounded py-1 pl-3 pr-[12vw] md:pr-[7vw]">
@@ -146,7 +149,7 @@
 			</form>
 		</section>
 
-		<section class="grid grid-cols-2 grid-rows-1 col-span-2 row-span-2 justify-center justify-items-center px-2 pl-8 py-2">
+		<section class="grid grid-cols-2 grid-rows-1 col-span-2 row-span-2 justify-center justify-items-center md:pt-2 pt-6 px-2 pl-8 py-2">
 			<section class="flex flex-col col-span-1 row-span-1 text-white">
 				<h4 class="text-2xl pb-2">Contact</h4>
 				<span>Phone: (953) 259-5400</span>
