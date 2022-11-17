@@ -12,7 +12,6 @@ function hideNav(){
 	closeElement.addEventListener("click", () => {
 		navElements.style.display = "none";
 		closeElement.style.display = "none";
-		console.log("hide happened");
 	})
 }
 
@@ -25,8 +24,6 @@ function showNav(){
 	openElement.addEventListener("click", () => {
 		navElements.style.display = "flex";
 		closeElement.style.display = "block";
-		console.log("show happened");
-
 	})
 }
 
@@ -40,13 +37,11 @@ function navFunctions(){
 		if(window.matchMedia("(min-width: 903px)").matches) {
 			navElements.style.display = "block";
 			closeElement.style.display = "none";
-			console.log("big screen");
 		} else {
 			navElements.style.display = "none";
 			
 			showNav();
 			hideNav();
-			console.log("small screen");
 		}
 	})
 
